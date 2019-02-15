@@ -7,30 +7,43 @@ let car = {
     isWorking: true,
 
     driveToWork(){
-        alert("Old Milege: $(this.milege)");
-        this.millege = this.millege+8;
-        alert("New milege: $(this.milege)");
+        alert(`Old Mileage: ${this.mileage}`);
+        this.mileage += 10;
+        alert(`New Mileage: ${this.mileage}`);
+    },
+}
 
-    }
+// FUNCTIONS
+// Logs all of our car's current stats to the console
+const reWriteStats = () => {
+    console.log(`Make: $(car.make)`);
+    console.log(`Model: $(car.model)`);
+    console.log(`Color: $(car.color)`);
+    console.log(`Mileage: $(car.mileage)`);
+    console.log(`Is Working: $(car.isWorking)`);
+    console.log(`(................................)`);
 }
 
 
-//Function
-const rewriteStats(){
+
+
+
+
+
+function reWriteStats(){
 
 }
+*/
 
-//Captual keyboards input. Depemding on the letter pressed it will "call" (execute)different functions
+// MAIN PROCESS
+// Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions.
 document.onkeyup = (event) => {
+    // Captures the key press, converts it to lowercase, and saves it to a variable
+    let letter = String.fromCharCode(event.keyCode).toLowerCase();
 
-
-//Capture the key press, save it into a variable
-let letter = String.funcOneCode(event.keycode).toLearnCase();
-
-
-if(letter==="d"){
-    car.driveToWork();
-    rewriteStats()
-}
+    if (letter === "d") {
+        car.driveToWork();
+        reWriteStats();
+    }
 
 }
