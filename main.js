@@ -1,9 +1,9 @@
-//Variables
-let car = {
-    make:"Jet",
-    model:"F-Ck-1",
-    color: "grey",
-    milege: 0,
+// VARIABLES
+const car = {
+    make: 'Jet',
+    model: 'CK',
+    color: 'grey',
+    mileage: 0,
     isWorking: true,
 
     driveToWork(){
@@ -11,19 +11,20 @@ let car = {
         this.mileage += 10;
         alert(`New Mileage: ${this.mileage}`);
     },
-    driveAroundTW(){
+
+    driveAroundUSA(){
         alert(`Old Mileage: ${this.mileage}`);
         this.mileage += 7000;
         alert(`New Mileage: ${this.mileage}`);
         alert('Car needs a tuneup!');
         this.isWorking = false;
     },
-    
+
     getTuneUp(){
         alert('Car is fixed and ready to go!');
         this.isWorking = true;
     },
-b
+
     honk(){
         alert("Honk! Honk!");
     }
@@ -31,15 +32,15 @@ b
 
 // FUNCTIONS
 // Logs all of our car's current stats to the console
-reWriteStats = () => {
+reWriteStats=()=>{
     console.log(`Make: ${car.make}`);
     console.log(`Model: ${car.model}`);
     console.log(`Color: ${car.color}`);
     console.log(`Mileage: ${car.mileage}`);
     console.log(`IsWorking: ${car.isWorking}`);
     console.log('-----------------------------');
-}
 
+}
 
 
 // MAIN PROCESS
